@@ -1,14 +1,19 @@
-import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import Services from "../Components/Services";
+import WhyChoseUs from "../Components/WhyChoseUs";
+import WorkingProcess from "../Components/WorkingProcess";
+
 
 
 const Home = () => {
-    const services = useLoaderData()
+
+
     return (
         <div>
             <Banner></Banner>
-            <Services services={services}></Services>
+            <Services></Services>
+            <WorkingProcess></WorkingProcess>
+            <WhyChoseUs></WhyChoseUs>
         </div>
     );
 };

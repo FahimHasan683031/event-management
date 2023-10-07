@@ -19,7 +19,7 @@ const ServiceCard = ({service}) => {
                     {description.slice(0,90)+'...'}
                 </p>
                 <h2 className="text-xl font font-bold text-orange-400 my-4">Price: {price}$</h2>
-                <Link to={`/${id}`} className="w-full block py-3 text-base font-bold text-white text-center rounded-full bg-[#485460]">View details</Link>
+                <Link to={`/${id}`} className="w-full block py-3 text-base font-bold text-white text-center rounded-full bg-orange-500">View details</Link>
             </div>
             
                 

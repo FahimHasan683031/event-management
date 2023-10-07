@@ -5,6 +5,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ServiceDetails from "../Pages/ServiceDetails";
 import Privet from "../Privet/Privet";
+import Services from "../Components/Services";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             path:'/:id',
             element:<Privet><ServiceDetails></ServiceDetails></Privet>,
             loader: ()=>fetch("/services.json")
+        },
+        {
+          path:'/services',
+          element:<Services></Services>
         }
       ]
     },
