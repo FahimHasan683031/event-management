@@ -1,14 +1,23 @@
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { useContext } from "react";
 import { authContext } from "../Context/AuthInfo";
 const Header = () => {
 
-    const { user } = useContext(authContext)
+    const { user,  signout} = useContext(authContext);
+    const navigate = useNavigate()
+    const logOutHandle =()=>{
+        signout()
+        .then(()=>{
+            navigate('/')
+        })
+        .catch(error=>console.log(error.message))
+        
+    }
     return (
         <div className="bg-white shadow-md ">
-        <div className=" py-3 px-3 max-w-screen-xl mx-auto ">
+        <div className=" py-3 px-4 max-w-screen-xl mx-auto ">
             <div className=" flex justify-between items-center">
                 <div>
                     <img className="w-[120px] h-[50px]" src="https://i.ibb.co/HPYmvSh/360-F-475785478-r4v-Z4-Dydg-Wey-Ftqz-Pqkdnd-ONspy-NYen-O.jpg" alt="" />
@@ -59,9 +68,9 @@ const Header = () => {
                             }
 
 
-                            <Link to='/register' className="px-4 py-[6px] w-26 h-9 text-white font-medium bg-[#34495e] rounded-full">Log Out</Link>
+                            <Link  onClick={logOutHandle } className="px-4 py-[6px] w-26 h-9 text-white font-medium bg-[#485460] rounded-full">Log Out</Link>
                         </div> : <div className="flex text-base font-medium text-white gap-5">
-                            <Link to='/register' className="px-4 py-[6px] bg-[#34495e] rounded-full">Register</Link>
+                            <Link to='/register' className="px-4 py-[6px] bg-[#485460] rounded-full">Register</Link>
                             <Link to='/login' className="px-4 py-[6px] bg-orange-600 rounded-full">Sign In</Link>
                         </div>
                     }

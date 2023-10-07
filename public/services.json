@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Conferences and Seminars",
+      "image": "https://i.ibb.co/JtPjbzr/alexandre-pellaes-6v-Ajp0psc-X0-unsplash.jpg",
+      "description": "Host impactful conferences and seminars that leave a lasting impression on your audience. Our expert team specializes in creating educational and engaging events tailored to your needs. From conceptualization to execution, we handle every detail, ensuring seamless logistics and a memorable experience. Whether you're looking to educate, inspire, or network, our conferences and seminars provide a platform for knowledge sharing and meaningful connections. Join us in delivering exceptional events that exceed your expectations.",
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "name": "Trade Shows and Expos",
+      "image": "https://thehustle.co/wp-content/uploads/2019/04/SXSW-Trade-Show-2018-photo-by-merrick-ales-1439x810-1-1-1024x576.jpg",
+      "description": "Showcase your products and services in style at trade shows and expos. Our comprehensive services include designing eye-catching booths, creating compelling promotional materials, and managing all aspects of your exhibit. We understand the importance of standing out in a crowded market, and our team will help you attract and engage potential clients, partners, and investors, leaving a lasting impression. Elevate your presence in the industry and seize new opportunities with our trade show and expo expertise.",
+      "price": 2500
+    },
+    {
+      "id": 3,
+      "name": "Team Building Workshops",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB92kD9hRAPwxczhAL--Qq6AjKs94_azf_Xw&usqp=CAU",
+      "description": "Boost team morale and productivity with our interactive team building workshops. Our carefully curated activities and exercises are designed to foster collaboration, communication, and cohesion among team members. Whether you're looking to strengthen relationships, improve problem-solving skills, or simply have fun, our workshops offer a customized approach to meet your specific goals. Experience the power of teamwork and unlock your team's full potential with our engaging workshops.",
+      "price": 1500
+    },
+    {
+      "id": 4,
+      "name": "Product Launches",
+      "image": "https://blog.dushow-spain.com/hubfs/Header%20Image%20Blog%20EN%20-%20CON%20logo%20%28EN%29/product%20launch.jpg",
+      "description": "Make a splash in your industry with a memorable product launch event. Our services cover everything from strategic planning to execution, ensuring that your new product gains maximum exposure and generates excitement. We specialize in creating buzzworthy moments that captivate your target audience and leave them eager to explore your latest offerings. Launch your product with confidence and leave a lasting impression with our product launch expertise.",
+      "price": 3000
+    },
+    {
+      "id": 5,
+      "name": "Corporate Meetings",
+      "image": "https://cdn2.hubspot.net/hub/260057/file-1558049106-jpg/iStock_000040537034_Medium.jpg",
+      "description": "Host productive corporate meetings in a professional and efficient environment. Our meeting spaces are equipped with all the amenities you need to conduct successful business gatherings. From board meetings to training sessions, we offer flexible solutions to accommodate your unique requirements, allowing you to focus on the agenda at hand. Streamline your corporate meetings with our convenient and well-equipped spaces.",
+      "price": 1000
+    },
+    {
+      "id": 6,
+      "name": "Award Ceremonies",
+      "image": "https://wearegreenspark.com/wp-content/uploads/VR-Awards-2018-award-ceremony-production.jpg",
+      "description": "Celebrate achievements and honor excellence with our award ceremony services. We take care of every detail, from venue setup to award design, ensuring a memorable and elegant event. Recognize the accomplishments of individuals or teams in style and create a sense of pride and motivation among your employees or industry peers. Our award ceremonies are tailored to reflect your organization's values and vision. Make your awards ceremony a truly special and meaningful occasion with our expert guidance and support.",
+      "price": 1800
+    }
+]

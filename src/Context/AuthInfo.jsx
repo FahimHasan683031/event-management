@@ -20,7 +20,7 @@ const AuthInfo = ({children}) => {
     setLoading(true)
     return (signInWithEmailAndPassword(auth,email,password))
    }
-   const signoutu = ()=>{
+   const signout = ()=>{
     setLoading(true)
     return signOut(auth)
    }
@@ -49,7 +49,7 @@ useEffect(()=>{
     user,
     createUser,
     signIn,
-    signoutu,
+    signout,
     googleSignIn,
     githubSignIn,
     loading

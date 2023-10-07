@@ -3,6 +3,8 @@ import Layout from "../Layout/Layout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ServiceDetails from "../Pages/ServiceDetails";
+import Privet from "../Privet/Privet";
 
 const router = createBrowserRouter([
     {
@@ -11,7 +13,8 @@ const router = createBrowserRouter([
       children:[
         {
             path:'/',
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader: ()=>fetch("/services.json")
         },
         {
             path:'/login',
@@ -20,6 +23,11 @@ const router = createBrowserRouter([
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+            path:'/:id',
+            element:<Privet><ServiceDetails></ServiceDetails></Privet>,
+            loader: ()=>fetch("/services.json")
         }
       ]
     },
