@@ -38,10 +38,11 @@ const githubSignIn = ()=>{
 
 // manage user
 useEffect(()=>{
-    onAuthStateChanged(auth, user=>{
+   const unSubscribe = onAuthStateChanged(auth, user=>{
         setUser(user)
         setLoading(false)
     })
+    return ()=>unSubscribe();
 },[])
 
    const authDetail = {
