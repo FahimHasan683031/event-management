@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Emily Johnson",
+      "image": "https://st4.depositphotos.com/13193658/30158/i/450/depositphotos_301586860-stock-photo-handsome-businessman-formal-wear-smiling.jpg",
+      "position": "Founder & CEO",
+      "description": "As the visionary founder and CEO of our event management company, Emily Johnson brings unmatched passion and creativity to the table. With over a decade of experience in the industry, she has an unparalleled knack for transforming ideas into breathtaking events. Emily's commitment to excellence and her ability to inspire our team and clients alike make her the driving force behind our success."
+    },
+    {
+      "id": 2,
+      "name": "Michael Rodriguez",
+      "image": "https://media.istockphoto.com/id/1008372424/photo/i-always-ready-for-business.jpg?s=612x612&w=0&k=20&c=xlnx_aMRj9BEffR8-4vreFiok4sfF0n6yt30j70lANI=",
+      "position": "Creative Director",
+      "description": "Meet Michael Rodriguez, our brilliant Creative Director. Michael's artistic flair and attention to detail are the secret ingredients behind our visually stunning events. With a background in design and a keen eye for aesthetics, he consistently turns concepts into captivating experiences. Michael's innovative thinking and unwavering dedication elevate every project he touches."
+    },
+    {
+      "id": 3,
+      "name": "Sarah Thompson",
+      "image": "https://blog.clearcompany.com/hs-fs/hub/212972/file-1187053509-jpg/IMG-Blog-Posts/employee-obsessed.jpg",
+      "position": "Event Coordinator",
+      "description": "Sarah Thompson, our dedicated Event Coordinator, is the backbone of our operations. Her meticulous planning, organizational skills, and ability to keep every detail in check ensure that every event runs seamlessly. Sarah's calm and composed demeanor under pressure is a reassuring presence for both clients and our team, making her an invaluable asset."
+    },
+    {
+      "id": 4,
+      "name": "David Lee",
+      "image": "https://static8.depositphotos.com/1594308/1073/i/450/depositphotos_10731037-stock-photo-business-brunette.jpg",
+      "position": "Marketing Manager",
+      "description": "David Lee is the Marketing Manager responsible for spreading the word about our exceptional events. With a passion for storytelling and a knack for digital marketing, David creates engaging campaigns that generate buzz and attract clients. His strategic thinking and data-driven approach help our company reach new heights."
+    },
+    {
+      "id": 5,
+      "name": "Jennifer Scott",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlSPlndg9E1X5HDw5r8xU9Kk_lyeS07blz7-sgq-UkrjUCRwDCjgaPF8x6X2RAtBAAcoI&usqp=CAU",
+      "position": "Client Relations Manager",
+      "description": "Jennifer Scott, our Client Relations Manager, is the friendly face that clients turn to for guidance and support. Her commitment to building strong client relationships ensures that our clients' needs are met with precision and care. Jennifer's dedication to client satisfaction is the cornerstone of our business."
+    },
+    {
+      "id": 6,
+      "name": "Robert Turner",
+      "image": "https://img.freepik.com/premium-photo/portrait-young-man-sitting-his-desk-office_484651-5103.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696464000&semt=ais",
+      "position": "Finance Director",
+      "description": "Meet Robert Turner, our Finance Director, responsible for ensuring the financial health of our company. With a keen understanding of budgets and an eye for fiscal responsibility, Robert ensures that our events are not only memorable but also cost-effective. His financial acumen keeps our operations running smoothly."
+    }
+]
