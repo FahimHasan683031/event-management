@@ -1,10 +1,14 @@
 
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BiSolidUserCircle } from "react-icons/bi";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { authContext } from "../Context/AuthInfo";
+import Aos from "aos";
+import "aos/dist/aos.css"
 const Header = () => {
-
+    useEffect(()=>{
+        Aos.init()
+    },[])
     const { user,  signout} = useContext(authContext);
     const navigate = useNavigate()
     const logOutHandle =()=>{
@@ -17,7 +21,7 @@ const Header = () => {
     }
  
     return (
-        <div className="bg-white shadow-md ">
+        <div data-aos="fade-down" className="bg-white shadow-md ">
         <div className=" py-3 px-4 max-w-screen-xl mx-auto ">
             <div className=" flex justify-between items-center">
                 <div>

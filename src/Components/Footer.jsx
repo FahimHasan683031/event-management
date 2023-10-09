@@ -1,8 +1,14 @@
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram,AiFillLinkedin,AiOutlineTwitter} from "react-icons/ai";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 const Footer = () => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     return (
-        <div className="bg-neutral mt-28 ">
+        <div data-aos="zoom-in" className="bg-neutral mt-28 ">
             
                 <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4 p-10 max-w-screen-xl mx-auto  text-neutral-content">
 

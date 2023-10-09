@@ -1,10 +1,16 @@
 import { PiPresentationChartBold} from "react-icons/pi";
 import { FaUserGraduate } from "react-icons/fa";
 import { FaHandHoldingDollar} from "react-icons/fa6";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const WorkingProcess = () => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     return (
-        <div className=" my-32 bg-orange-50 py-10">
+        <div data-aos="fade-up" className=" my-32 bg-orange-50 py-10">
             <p className="text-base font-medium text-center   text-orange-500">FOR YOUR ADVANCED FEATURES</p>
             <h1 className="font-bold text-4xl text-center mt-4 mb-16">How We Work with Clients</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

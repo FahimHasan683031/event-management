@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { authContext } from "../Context/AuthInfo";
 import { updateProfile } from "firebase/auth";
-import { auth } from "../Firebase/firebase.init";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FcGoogle} from "react-icons/fc";
@@ -36,19 +35,22 @@ const Register = () => {
         setpasErrMsg('')
 
         createUser(email,password)
-        .then(()=>{
+        .then((res)=>{
             toast.success('Successfully Register!')
+
+            // update user 
+            updateProfile(res.user, {
+                displayName:name, photoURL:url
+            })
+            .then()
+            .catch(error => console.log(error.message))
             navigate('/login')
         })
         .catch(() =>{
             toast.error("This email already used.")
         })
 
-        updateProfile(auth.currentUser, {
-            displayName:name, photoURL:url
-        })
-        .then(res=> console.log(res.user))
-        .catch(error => console.log(error.message))
+        
         
     }
 

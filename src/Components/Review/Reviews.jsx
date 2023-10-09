@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 
 const Reviews = () => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     const [reviews, setReviews] = useState()
     useEffect(() => {
         fetch('/review.json')
@@ -10,7 +15,7 @@ const Reviews = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div className=" bg-orange-50">
+        <div data-aos="fade-up" className=" bg-orange-50">
         <div className="max-w-screen-xl mx-auto px-4 my-28 ">
             <div className="text-center pt-12 mb-20">
                 <p className="text-base font-medium text-center   text-orange-500">CLIENTS REVIEWS</p>

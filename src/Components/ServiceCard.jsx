@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const ServiceCard = ({ service }) => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
 
     const { price, description, image, name, id } = service
     return (
-        <div className="relative mt-7 flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 drop-shadow-lg">
+        <div data-aos="zoom-in" className="relative mt-7 flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 drop-shadow-lg">
             <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
                 <img className="w-full h-[220px] rounded-t-lg"
                     src={image}

@@ -24,7 +24,7 @@ const Login = () => {
             navigate( location?.state ? location.state : '/')
         })
         .catch(error => {
-            setLoginError('Login information is not correct!!!')
+            setLoginError('Email OR Password is not correct!!!')
             console.log(error.message)
         })
     }

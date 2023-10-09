@@ -1,9 +1,15 @@
 
 import { BsFillCalendarRangeFill } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 const SingleBlog = ({ blog }) => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     const { description, auth_image, auth_name, date, image, title } = blog
     return (
-        <div className="mb-5">
+        <div data-aos="zoom-in" className="mb-5">
             <div className="relative  flex w-full max-w-[26rem] flex-col rounded-xl bg-white  text-gray-700 drop-shadow-lg ">
                 <div className="relative  overflow-hidden  bg-blue-gray-500 text-white   ">
                     <img

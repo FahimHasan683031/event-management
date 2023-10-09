@@ -1,10 +1,17 @@
 
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
 const TeamCard = ({ member }) => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
     const { description, position, image, name } = member
     return (
-        <div>
+        <div data-aos="zoom-in">
 
 
             <div className="relative flex w-full max-w-[48rem] flex-row  drop-shadow-md  bg-orange-50 rounded-lg bg-clip-border text-gray-700 shadow-md">

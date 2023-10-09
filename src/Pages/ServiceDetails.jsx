@@ -10,8 +10,8 @@ const ServiceDetails = () => {
             <img src={image} className="w-full h-[60vh]" alt="" />
             <h1 className="text-4xl font-bold mt-5 ">{name}</h1>
             <p className="text-xl font-medium text-slate-600 my-4 leading-10">{description}</p>
-            <h2 className="text-2xl font-bold text-orange-400 mb-4">Price: {price}$</h2>
-            <button className="mb-7 px-4 py-3 text-white bg-[#485460] text-lg font-medium">Book Now</button>
+            <h2 className="text-2xl font-bold text-orange-500 mb-4">Price: {price}$</h2>
+            <button className="mb-7 px-3 py-2 text-white rounded-md bg-orange-500 text-lg font-medium">Book Now</button>
 
         </div>
     );
