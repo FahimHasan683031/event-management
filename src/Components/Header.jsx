@@ -50,7 +50,7 @@ const Header = () => {
                             Blog
                         </NavLink>
                         <NavLink
-                            to="about"
+                            to="/about"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "underline text-orange-500" : ""
                             }

@@ -2,14 +2,14 @@
 
 const WhyChoseUs = () => {
     return (
-        <div className="max-w-screen-xl mx-auto my-20 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+        <div className="max-w-screen-xl px-6 mx-auto my-20 grid grid-cols-1  lg:grid-cols-2 gap-4">
+            <div className="text-center lg:text-left">
                 <p className="text-lg font-medium text-orange-400 py-3">Our advantages</p>
                 <h1 className="text-4xl font-bold text-[#242424] leading-[50px]">Why do people trust <br /> our company?</h1>
                 <p className="text-base font-medium text-gray-500 leading-8 my-3">We will be happy to take on the implementation of a project of any complexity. We guarantee the quality of our work and have many <br />  years of experience in the field of repair.</p>
                 <button className="px-3 py-2 text-white font-medium bg-orange-400 my-3">View More</button>
             </div>
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="p-4 border-[4px] border-[#edeae8]">
                     <h1 className="text-3xl font-bold text-orange-400 my-3">01.</h1>
                     <h2 className="text-2xl font-bold text-[#242424] my-3">Versatility</h2>

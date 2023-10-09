@@ -8,6 +8,7 @@ import Privet from "../Privet/Privet";
 import Blog from "../Pages/Blog/Blog";
 import ServicesPage from "../Pages/ServicesPage";
 import ErrorPage from "../Pages/ErrorPage";
+import AboutUs from "../Pages/AboutUs";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
           path:'/services',
           element:<Privet><ServicesPage></ServicesPage></Privet>
+        },
+        {
+          path:'/about',
+          element:<Privet><AboutUs></AboutUs></Privet>
         }
       ]
     },
