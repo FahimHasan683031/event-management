@@ -10,9 +10,10 @@ const Reviews = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div className="max-w-screen-xl mx-auto px-4 my-32 ">
-            <div className="text-center mb-20">
-                <p className="text-base font-medium text-center mt-32  text-orange-500">CLIENTS REVIEWS</p>
+        <div className=" bg-orange-50">
+        <div className="max-w-screen-xl mx-auto px-4 my-28 ">
+            <div className="text-center pt-12 mb-20">
+                <p className="text-base font-medium text-center   text-orange-500">CLIENTS REVIEWS</p>
                 <h1 className="text-center text-4xl font-bold my-4 ">Our Happy Clients</h1>
             </div>
 
@@ -21,6 +22,7 @@ const Reviews = () => {
                     reviews?.map(review => <ReviewCard key={review.id} review={review}></ReviewCard>)
                 }
             </div>
+        </div>
         </div>
     );
 };

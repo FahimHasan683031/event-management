@@ -4,8 +4,8 @@ import { FaHandHoldingDollar} from "react-icons/fa6";
 
 const WorkingProcess = () => {
     return (
-        <div className=" my-32">
-            <p className="text-base font-medium text-center mt-32  text-orange-500">FOR YOUR ADVANCED FEATURES</p>
+        <div className=" my-32 bg-orange-50 py-10">
+            <p className="text-base font-medium text-center   text-orange-500">FOR YOUR ADVANCED FEATURES</p>
             <h1 className="font-bold text-4xl text-center mt-4 mb-16">How We Work with Clients</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 

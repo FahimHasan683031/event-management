@@ -6,6 +6,7 @@ import Register from "../Pages/Register";
 import ServiceDetails from "../Pages/ServiceDetails";
 import Privet from "../Privet/Privet";
 import Services from "../Components/Services";
+import Blog from "../Pages/Blog";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             path:'/',
             element:<Home></Home>,
             loader: ()=>fetch("/services.json")
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         },
         {
             path:'/login',

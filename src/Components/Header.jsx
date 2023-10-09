@@ -15,6 +15,7 @@ const Header = () => {
         .catch(error=>console.log(error.message))
         
     }
+ 
     return (
         <div className="bg-white shadow-md ">
         <div className=" py-3 px-4 max-w-screen-xl mx-auto ">
@@ -41,14 +42,6 @@ const Header = () => {
                             Services
                         </NavLink>
                         <NavLink
-                            to="about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "underline text-orange-500" : ""
-                            }
-                        >
-                            About
-                        </NavLink>
-                        <NavLink
                             to="/Blog"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "underline text-orange-500" : ""
@@ -56,15 +49,24 @@ const Header = () => {
                         >
                             Blog
                         </NavLink>
+                        <NavLink
+                            to="about"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "underline text-orange-500" : ""
+                            }
+                        >
+                            About
+                        </NavLink>
 
                     </div>
                 </div>
                 <div>
 
+
                     {
                         user ? <div className="flex gap-4 items-center">
                             {
-                                user.photoURL ? <img src={user.photoURL} alt="" /> : <BiSolidUserCircle className="w-[50px] h-[50px]"></BiSolidUserCircle>
+                                user.photoURL ? <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" /> : <BiSolidUserCircle className="w-[50px] h-[50px]"></BiSolidUserCircle>
                             }
 
 

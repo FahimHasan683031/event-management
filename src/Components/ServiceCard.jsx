@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({service}) => {
+const ServiceCard = ({ service }) => {
 
-    const {price,description,image,name,id}=service
+    const { price, description, image, name, id } = service
     return (
         <div className="relative mt-7 flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 drop-shadow-lg">
             <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
@@ -16,14 +16,17 @@ const ServiceCard = ({service}) => {
                     {name}
                 </h4>
                 <p className="mt-3 block font-sans text-lg font-normal leading-relaxed text-gray-700 antialiased">
-                    {description.slice(0,90)+'...'}
+                    {description.slice(0, 90) + '...'}
                 </p>
-                <h2 className="text-xl font font-bold text-orange-400 my-4">Price: {price}$</h2>
-                <Link to={`/${id}`} className="w-full block py-3 text-base font-bold text-white text-center rounded-full bg-orange-500">View details</Link>
+                <div className="flex justify-between items-center">
+                    <h2 className="text-xl font font-bold text-orange-400 my-4">Price: {price}$</h2>
+                    <Link to={`/${id}`} className=" px-3 py-2 text-base font-medium text-white text-center rounded-md bg-orange-500">View details</Link>
+                </div>
+
             </div>
-            
-                
-            
+
+
+
         </div>
     );
 };

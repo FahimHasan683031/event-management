@@ -1,12 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { authContext } from "../Context/AuthInfo";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AiFillEye,AiFillEyeInvisible,AiFillGithub } from "react-icons/ai";
+import { FcGoogle} from "react-icons/fc";
+import toast from "react-hot-toast";
 
 const Login = () => {
- const {signIn} = useContext(authContext)
+ const {signIn,googleSignIn,githubSignIn} = useContext(authContext)
  const location = useLocation()
  const navigate = useNavigate()
- 
+ const [passwordShow, setPasswordShow]=useState(false)
+ const [loginError, setLoginError]=useState('')
     
     const loginHandle = e =>{
         e.preventDefault()
@@ -15,6 +19,29 @@ const Login = () => {
         console.log(email,password)
         signIn(email,password)
         .then(()=>{
+            setLoginError('')
+            toast.success('Successfully login!')
+            navigate( location?.state ? location.state : '/')
+        })
+        .catch(error => {
+            setLoginError('Login information is not correct!!!')
+            console.log(error.message)
+        })
+    }
+
+    const googleSigninHandle =()=>{
+        googleSignIn()
+        .then(()=>{
+            toast.success('Successfully login!')
+            navigate( location?.state ? location.state : '/')
+        })
+        .catch(error => console.log(error.message))
+    }
+
+    const gitHubSignInHandle =()=>{
+        githubSignIn()
+        .then(()=>{
+            toast.success('Successfully login!')
             navigate( location?.state ? location.state : '/')
         })
         .catch(error => console.log(error.message))
@@ -26,7 +53,7 @@ const Login = () => {
                
                 <div className=" flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
                     <form onSubmit={loginHandle} className=" px-6 pt-4 pb-6 text-sm ">
-                    <h1 className="text-4xl font-bold text-center mb-4">Login now</h1>
+                    <h1 className="text-4xl font-bold text-orange-500 pt-3 text-center mb-4">Login now</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -34,18 +61,32 @@ const Login = () => {
                             <input type="email" placeholder="email" name="email" className=" py-[10px] px-3 border drop-shadow  " required />
                         </div>
 
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type="password" name="password" placeholder="password" className=" py-[10px] px-3 border drop-shadow  " required />
-                        </div>
+                        <div className="form-control relative">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type={passwordShow ? 'text' : 'password'} name="password" placeholder="password" className=" py-[10px] px-3 border drop-shadow  " required />
+                                <span className="text-xl absolute right-3 top-12" onClick={()=>setPasswordShow(!passwordShow)}>
+                                    {
+                                        passwordShow ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>
+                                    }
+                                </span>
+                            </div>
+                            <div>
+                                {
+                                    loginError && <p className="text-red-600 mt-3">{loginError}</p>
+                                }
+                            </div>
                         <div className="mt-3">
                             <p>New user? Please <Link className="text-blue-700" to='/register'>Register</Link></p>
                         </div>
                         <div className="form-control mt-4">
-                            <button  type="submit" className="py-3 text-white font-bold bg-[#ffa801]">Login</button>
+                            <button  type="submit" className="py-3 text-white font-bold bg-orange-500">Login</button>
                         </div>
+                        <div className="text-center border-t border-slate-600 my-6 pt-3 flex gap-4 justify-center">
+                                <FcGoogle onClick={googleSigninHandle } className="text-3xl cursor-pointer "></FcGoogle>
+                                <AiFillGithub onClick={gitHubSignInHandle} className="text-3xl cursor-pointer "></AiFillGithub>
+                            </div>
                     </form>
                 </div>
             </div>
