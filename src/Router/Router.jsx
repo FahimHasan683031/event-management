@@ -5,13 +5,16 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ServiceDetails from "../Pages/ServiceDetails";
 import Privet from "../Privet/Privet";
-import Services from "../Components/Services";
-import Blog from "../Pages/Blog";
+import Blog from "../Pages/Blog/Blog";
+import ServicesPage from "../Pages/ServicesPage";
+import ErrorPage from "../Pages/ErrorPage";
+
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout></Layout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/blog',
-          element:<Blog></Blog>
+          element:<Privet><Blog></Blog></Privet>
         },
         {
             path:'/login',
@@ -37,7 +40,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/services',
-          element:<Services></Services>
+          element:<Privet><ServicesPage></ServicesPage></Privet>
         }
       ]
     },
